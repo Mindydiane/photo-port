@@ -15,19 +15,19 @@ function Nav() {
     return (
     <header>
     <h2>
-    <a href="/">
+    <a data-testid="link" href="/">
       <span role="img" aria-label="camera"> 📸</span> Oh Snap!
     </a>
     </h2>
     <nav>
         <ul className="flex-row">
         <li className="mx-2">
-            <a href="#about" onClick={() => categorySelected()}>
+            <a data-testid="about" href="#about" onClick={() => categorySelected("About")}>
              About me
             </a>
         </li>
         <li className={"mx-2"}>
-            <span onClick={() => categorySelected()}>Contact</span>
+            <span onClick={() => categorySelected('Contact')}>Contact</span>
         </li>
         {categories.map((category) => (
             <li className="mx-1" key={category.name} >
